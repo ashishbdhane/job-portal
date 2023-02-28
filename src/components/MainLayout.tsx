@@ -11,7 +11,7 @@ import {
   LockFilled,
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme, Input, Tooltip, FloatButton } from 'antd';
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Link, Outlet, useLocation} from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
 const { Search } = Input;
@@ -30,28 +30,29 @@ const MainLayout: React.FC = () => {
         <div className={classes.search}>
           {collapsed ? (
             <Tooltip title="search">
-              <Button type="primary" shape="circle" icon={<SearchOutlined />} />
+              <Button type="primary" shape="circle" onClick={() => {setCollapsed(false)}}  icon={<SearchOutlined />} />
             </Tooltip>
           ) : (
-            <Search placeholder="Search" enterButton />
+            <Search placeholder="Search" ref={(input) => {input && input.focus() }} enterButton  />
           )}
         </div>
         <Menu
           theme="dark"
           mode="inline"
           selectedKeys={[location.pathname]}
-          onSelect={console.log}>
-          <Menu.Item key={'/profile'} icon={<UserOutlined/>}>
-            <Link to='/profile'>Profile</Link>
+          onSelect={console.log}
+        >
+          <Menu.Item key={'/profile'} icon={<UserOutlined />}>
+            <Link to="/profile">Profile</Link>
           </Menu.Item>
-          <Menu.Item key={'/opportunities'} icon={<NotificationTwoTone/>}>
-            <Link to='/opportunities'>Opportunites</Link>
+          <Menu.Item key={'/opportunities'} icon={<NotificationTwoTone />}>
+            <Link to="/opportunities">Opportunites</Link>
           </Menu.Item>
           <Menu.Item key={'/discuss'} icon={<CommentOutlined />}>
-            <Link to='/discuss'>Discuss</Link>
+            <Link to="/discuss">Discuss</Link>
           </Menu.Item>
-          <Menu.Item key={'/admin'} icon={<LockFilled/>}>
-            <Link to='/admin'>Admin</Link>
+          <Menu.Item key={'/admin'} icon={<LockFilled />}>
+            <Link to="/admin">Admin</Link>
           </Menu.Item>
           {/* items={[
             {
