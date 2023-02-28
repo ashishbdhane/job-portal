@@ -3,6 +3,8 @@ import MainLayout from './components/MainLayout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import OpportunitiesPage from './Pages/OpportunitiesPage';
 import LoginPage from './Pages/LoginPage';
+import ProfilePage from './Pages/ProfilePage';
+import AdminPage from './Pages/AdminPage';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,9 @@ const router = createBrowserRouter([
       { index: true, element: <OpportunitiesPage /> },
       { path: 'opportunities', element: <OpportunitiesPage /> },
       { path: 'login', element: <LoginPage /> },
+      { path: 'profile', element: <ProfilePage /> },
+      { path: 'admin', element: <AdminPage /> },  
+
 
     ],
   },

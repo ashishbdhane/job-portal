@@ -1,6 +1,6 @@
 import React from 'react';
-import CardItem from '../CardContent/CardItem';
-import ItemType from '../CardContent/ItemType';
+import CardItem from './CardContent/CardItem';
+import ItemType from './CardContent/ItemType';
 import classes from './Opportunities.module.css'
 
 const jobs: ItemType[] = [
