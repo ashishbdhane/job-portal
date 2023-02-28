@@ -1,15 +1,27 @@
-import React from 'react'
-import ProgressBar from 'react-progressbar-on-scroll';
-import MainLayout from './components/MainLayout'
-import classes from './App.module.css'
+import React from 'react';
+import MainLayout from './components/MainLayout';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import OpportunitiesPage from './Pages/OpportunitiesPage';
+import LoginPage from './Pages/LoginPage';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+    // errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <OpportunitiesPage /> },
+      { path: 'opportunities', element: <OpportunitiesPage /> },
+      { path: 'login', element: <LoginPage /> },
+
+    ],
+  },
+]);
 
 const App = () => {
   return (
-    <div className={classes.layout}>
-     <ProgressBar color="blue" gradient={false} height={5} />
-    <MainLayout/>
-    </div>
-  )
-}
+    <RouterProvider router={router}/>
+  );
+};
 
-export default App
+export default App;

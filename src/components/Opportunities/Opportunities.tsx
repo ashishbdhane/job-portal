@@ -1,7 +1,7 @@
-import { Row } from 'antd';
 import React from 'react';
 import CardItem from '../CardContent/CardItem';
 import ItemType from '../CardContent/ItemType';
+import classes from './Opportunities.module.css'
 
 const jobs: ItemType[] = [
   {
@@ -28,7 +28,7 @@ const jobs: ItemType[] = [
     Location: 'Banglore',
     Salary: '15-20 LPA',
     image:
-      'https://cloudfront-us-east-2.images.arcpublishing.com/reuters/FXC2MIW2L5KWPDQ3XBRX2TF7FE.jpg',
+      'https://cloudfront-us-east-2.images.arcpublishing.com/reuters/FXC2MIW2L5KWPDQ3XBRX2TF7FE.jpg',  
     req: ['Experienced'],
   },
   {
@@ -45,11 +45,11 @@ const jobs: ItemType[] = [
 const Opportunities = () => {
   return (
     <>
-      <Row  gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]} justify={'space-between'} wrap>
+      <div className={classes.gridContainer}>       
         {jobs.map((item) => (
           <CardItem item={item} />
-        ))}
-      </Row>
+          ))}
+          </div>
     </>
   );
 };

@@ -1,0 +1,15 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto ;
+    justify-content: space-between;
+    row-gap: 10px;
+    
+}
+
+
+@media only screen and (max-width: 800px) {
+    .gridContainer {
+        grid-template-columns: auto ;
+    }
+}
+

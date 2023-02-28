@@ -12,6 +12,11 @@ import {
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme, Input, Tooltip, FloatButton } from 'antd';
 import Opportunities from './Opportunities/Opportunities';
+import { Outlet } from 'react-router-dom';
+
+
+
+
 
 const { Header, Sider, Content } = Layout;
 const { Search } = Input;
@@ -23,7 +28,7 @@ const MainLayout: React.FC = () => {
   } = theme.useToken();
 
   return (
-    <Layout style={{ height: '100%' }}>
+    <Layout style={{ minHeight: '100vh'}}>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         {/* <img src={require('../assets/Job-portal-logo.jpg')} alt="logo" className={classes.logo}/> */}
         <div className={classes.search}>
@@ -39,9 +44,10 @@ const MainLayout: React.FC = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={['2']}
+          onSelect={console.log}
           items={[
             {
-              key: '1',
+              key: '/profile',
               icon: <UserOutlined />,
               label: 'Profile',
             },
@@ -90,7 +96,7 @@ const MainLayout: React.FC = () => {
             background: colorBgContainer,
           }}
         >
-          <Opportunities />
+          <Outlet/>
           <FloatButton.BackTop />
         </Content>
       </Layout>
