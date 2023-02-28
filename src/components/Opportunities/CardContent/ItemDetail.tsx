@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import ItemType from './ItemType';
 
-const ItemDetail = () => {
-  return (
-    <div>ItemDetail</div>
-  )
-}
+const ItemDetail: React.FC<{ item: ItemType }> = (props) => {
+  return <div>Salary: {props.item.Salary}</div>;
+};
 
-export default ItemDetail
+export default ItemDetail;

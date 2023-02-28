@@ -4,7 +4,7 @@ import classes from './MainLayout.module.css';
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  ToolOutlined,
+  CommentOutlined,
   UserOutlined,
   NotificationTwoTone,
   SearchOutlined,
@@ -47,8 +47,8 @@ const MainLayout: React.FC = () => {
           <Menu.Item key={'/opportunities'} icon={<NotificationTwoTone/>}>
             <Link to='/opportunities'>Opportunites</Link>
           </Menu.Item>
-          <Menu.Item key={'/details'} icon={<ToolOutlined/>}>
-            <Link to='/details'>Details</Link>
+          <Menu.Item key={'/discuss'} icon={<CommentOutlined />}>
+            <Link to='/discuss'>Discuss</Link>
           </Menu.Item>
           <Menu.Item key={'/admin'} icon={<LockFilled/>}>
             <Link to='/admin'>Admin</Link>

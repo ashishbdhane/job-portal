@@ -39,10 +39,10 @@ const CardItem: React.FC<{ item: ItemType }> = (props) => (
       style={{ width: '100%', margin: 0 }}
     >
       <Panel header="More Details" showArrow={true} key="1">
-        <ItemDetail />
+        <ItemDetail item={props.item}/>
       </Panel>
     </Collapse>
-    <Button type="dashed">Register</Button>
+    <Button type="dashed" href={props.item.RegLink} target='_blank'  rel="noreferrer">Register</Button>
   </Card>
 );
 

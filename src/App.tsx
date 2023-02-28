@@ -5,6 +5,7 @@ import OpportunitiesPage from './Pages/OpportunitiesPage';
 import LoginPage from './Pages/LoginPage';
 import ProfilePage from './Pages/ProfilePage';
 import AdminPage from './Pages/AdminPage';
+import DiscussPage from './Pages/DiscussPage';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,7 @@ const router = createBrowserRouter([
       { path: 'login', element: <LoginPage /> },
       { path: 'profile', element: <ProfilePage /> },
       { path: 'admin', element: <AdminPage /> },  
-
-
+      { path: 'discuss', element: <DiscussPage /> },  
     ],
   },
 ]);
