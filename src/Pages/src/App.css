@@ -1,0 +1,55 @@
+
+
+.appBg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url('./images/img.jpeg');
+  background-size: cover;
+}
+
+.lg{
+  /* background-color: rgb(255, 255, 255); */
+  box-shadow: 0px 8px 16px 0 rgba(22, 22, 26, 0.33);
+  backdrop-filter: blur(3px);
+  padding: 26px 46px 0px 46px;
+  border-radius: 16px;
+}
+.sc{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  color: white;
+  font-size: 24px;
+  
+}
+.dont{
+  margin-top: 10px;
+  /* padding: 2px; */
+  display: flex;
+  margin-right: 5px;
+  margin-left: 5px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* justify-items: center; */
+  cursor: pointer;
+
+}
+
+.uses{
+  margin-top: 10px;
+  /* padding: 2px; */
+  display: flex;
+  margin-right: 5px;
+  margin-left: 5px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* justify-items: center; */
+  cursor: pointer;
+}
+
+.sci{
+  cursor: pointer;
+}
